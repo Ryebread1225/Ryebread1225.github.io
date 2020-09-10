@@ -1,0 +1,30 @@
+body {
+            background-color:#202020
+        }
+        li {
+            color:white
+        }
+        h1 {
+            color:white;text-align:center
+        }
+        p {
+            color:white
+        }
+        b {
+            color:white
+        }
+        i {
+            color:white
+        }
+        a {
+            color:white
+        }
+        .headerRow {
+            background-color:white
+        }
+        .oddRow {
+            background-color:deeppink
+        }
+        .evenRow {
+            background-color:white
+        }
