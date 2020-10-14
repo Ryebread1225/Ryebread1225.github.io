@@ -99,10 +99,10 @@
             </div>
             <div id="button_choices">
             
-                <a id="b1" class="buttons" href="" onclick="bclick(1)">Yes</a>
-                <a id="b2" class="buttons" href=""onclick="bclick(2)">no</a>
-                <a id="b3" class="buttons" href=""onclick="bclick(3)">Yes</a>
-                <a id="b4" class="buttons" href=""onclick="bclick(4)">no</a>
+                <a id="b1" class="buttons" href="#" onclick="bclick(1)">Yes</a>
+                <a id="b2" class="buttons" href="#"onclick="bclick(2)">no</a>
+                <a id="b3" class="buttons" href="#"onclick="bclick(3)">Yes</a>
+                <a id="b4" class="buttons" href="#"onclick="bclick(4)">no</a>
 
             </div>        
         </div>
@@ -120,26 +120,38 @@
         var p1 = document.getElementById("p3");
         var state = "intro";
         intro();
+
         function intro(){
-            img.src = "images/people.jpg";
-            b1.innerHTML = "Stay in School";
-            b2.innerHTML = "Go to camp";
+            img.src = "images/babysloth.jpg";
+            b1.innerHTML = "yes";
+            b2.innerHTML = "No";
             b3.style.display = "none";
             b4.style.display = "none";
             p1.innerHTML = "Welcome to my Adventure. The year is 1975. Your name is John.";
-            p2.innerHTML = "Would you like to stay in school or go to camp?"
+            p2.innerHTML = "Would you like to schmum?"
             p3.innerHTML = "";
         }
 
         function stayInSchoo(){
-            img.src="images/school.jpg";
+            img.src="images/babysloth.jpg";
             p1.innterHTML = "Being training for powers";
             p2.innerHTML = "Meet other kids at the academy";
             p3.innerHTML = "Would you like to try and escape";
             b1.innerHTML = "Yes";
             b2.innerHTML = "No";
             b3.innerHTML = "Maybe";
+            b3.style.display = block
         }
+
+         function escape(){
+            img.src="images/babysloth.jpg";
+            p1.innterHTML = "Being training for powers";
+            p2.innerHTML = "Meet other kids at the academy";
+            p3.innerHTML = "Would you like to try and escape";
+            b1.innerHTML = "Yes";
+            b2.innerHTML = "No";
+            b3.innerHTML = "Maybe";
+            b3.style.display = block
 
 
         //////State Machine
@@ -156,6 +168,15 @@
                 state="goToCamp";
             }
         }
+        else if(state == "stayInSchool"){
+            if(button == 1){
+                escape();
+                state = "escape"
+            }
+            else if(button ==2){
+                intenseTraining();
+                state = "intenseTraining";
+            }
 
     </script>
     </body>
