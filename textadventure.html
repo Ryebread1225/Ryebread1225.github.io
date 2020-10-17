@@ -87,7 +87,7 @@
         </ul>
 <div id="container">
         <div id="left_pane">
-            <img id="story_img" src="yuh.JPG"/>
+            <img id="story_img" src="images/MCDD.jpg"/>
 
 
         </div>
@@ -127,7 +127,7 @@
         }
         
         function goToWork (){
-            img.src = "";
+            img.src = "images/LEFT.jpg";
             p1.innerHTML = "Your feeling like changing your route to work today."
             p2.innerHTML = "You can either go onto your normal route or try another."
             p3.innerHTML = "Are you built different? Where will you go?"
@@ -137,7 +137,7 @@
         }
 
         function normalRoute (){
-            img.src = "";
+            img.src = "images/TRAVVY.jpg";
             p1.innerHTML = "Not feeling built different today, you walk to your late night shift at McDonalds. You get there safely, put your work clothes on and start grinding for that bread"
             p2.innerHTML = "You feel funny but dismiss it. You begin your job as chef. The new food item is the Travis Scott burger, popularly named Travvie Patty.You start cranking out thousands of travvy patties in minutes. Your co-workers look at you astonished."
             p3.innerHTML = "Your manager wants to talk"
@@ -147,7 +147,7 @@
         }
 
         function differentRoute (){
-            img.src = "";
+            img.src = "images/SCAREY.jpg";
             p1.innerHTML = "You go left instead of right. You walk in to a weird dark alley"
             p2.innerHTML = "You decide to walk into the alley, you must get to work. You must obtain that bread."
             p3.innerHTML = ""
@@ -157,7 +157,7 @@
         }
 
         function goIntoAlley (){
-            img.src = "";
+            img.src ="images/PEOPLE.jpg";
             p1.innerHTML = "Your walking minding your business, trying not to attract attention."
             p2.innerHTML = "All of a sudden a group of men approach you"
             p3.innerHTML = "Their leader Manny Heffley tells them to jump you"
@@ -165,7 +165,7 @@
         }
 
          function attemptToRun (){
-            img.src = "";
+            img.src = "images/SLAP.jpg";
             p1.innerHTML = "Your to late. Manny and his boys have you surrounded."
             p2.innerHTML = "You know its futile but you try to break away from them"
             p3.innerHTML = "Manny Pistol whips you. You fall to the ground.Manny comes close to your ear on the ground and tells you to listen."
@@ -173,7 +173,7 @@
         }
 
          function listenToManny (){
-            img.src = "";
+            img.src = "images/MANNY.png";
             p1.innerHTML = "Manny conjours a black hole from no where and reaches into it. He pulls out a spray can."
             p2.innerHTML = "He begins to tag the wall. While he is doing this he mumbles on about society, similar to the joker movie. You are confused. Manny sees this, he says you dont need to understand, just watch."
             p3.innerHTML = "You see that he has drawn the symbol of the revolution, the manny. He leans in close to your ear and whispers, the manny will not be televised. The world fades to black. GGWP should've gone the normal route."
@@ -191,7 +191,7 @@
         }
 
         function stayAtHome (){
-            img.src = "";
+            img.src = "images/BADGAME.jpg";
             p1.innerHTML = "You stay home and relax and think about what you want to do. You want to play league of legends. You have dreams of finally climbing out of bronze into diamond."
             p2.innerHTML = "Your are worried about getting hooked again"
             p3.innerHTML = "You tell yourself that it wont happen again"
@@ -201,7 +201,7 @@
         }
 
          function goGame (){
-            img.src = "";
+            img.src = "images/FUN.png";
             p1.innerHTML = "You begin to play League of Legends, prepared to have no fun because that game sucks."
             p2.innerHTML = "You start to play, you have fun."
             p3.innerHTML = "You start winning many games, you feel hooked."
@@ -211,17 +211,24 @@
         } 
 
         function keepP (){
-            img.src = "";
+            img.src = "images/SAD.jpg";
             p1.innerHTML = "Days become weeks, weeks become months."
             p2.innerHTML = "You haven't showered for months, your room is a mess. You keyboard is covered in cheeto dust as well as you.You have become addicted."
-            p3.innerHTML = "Since playing for months on end you have been fired from your job. You realize rent has to be payed in a day. You have no money. You spent it all on riot points. Should have gone to work.?"
+            p3.innerHTML = "Since playing for months on end you have been fired from your job. You realize rent has to be payed in a day. You have no money. You spent it all on riot points. Should have gone to work."
+            b1.innerHTML = "Restart"
+            
+        }
+        
+        function startTalk (){
+            img.src = "images/money.jpg";
+            p1.innerHTML = "Your manager is flabergasted. He is quaking in his timbs. He is shooketh."
+            p2.innerHTML = "He has never seen someone crank that many travvy patties at once. He immedietly drops his position as manager and gives it to you."
+            p3.innerHTML = "You can finally make big money. You can now finally afford that boost to challenger from the young seanzera. GGWP gamer, now you are"
             b1.innerHTML = "Restart"
             b2.innerHTML =
             b2.style.display = "none"
         }
-        
-        
-        
+    
         ///State Machine
         function bclick(button){  
             if (state == "intro"){
@@ -287,6 +294,28 @@
                     state = "intro";
                 }
             }
+
+            else if(state == "normalRoute"){
+                if (button == 1){
+                    startTalk ();
+                    state = "startTalk";
+                }
+            }
+
+            else if(state == "startTalk"){
+                if (button == 1){
+                    intro ();
+                    state = "intro";
+                }
+            }
+
+            else if(state == "keepP"){
+                if (button == 1){
+                    intro ();
+                    state = "intro";
+                }
+            }
+
         }
     </script>
     </body>
