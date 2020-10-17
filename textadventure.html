@@ -87,97 +87,207 @@
         </ul>
 <div id="container">
         <div id="left_pane">
-            <img id="story_img" src="images/babysloth.jpg"/>
+            <img id="story_img" src="yuh.JPG"/>
 
 
         </div>
         <div id="right_pane">
             <div id="story_text">
-                <p id="p1">Welcome to the Schmum zone</p>
-                <p id="p2">You just discover the streaming platform Twitch</p>
-                <p id="p3">Do you want to stream?</p>
+                <p id="p1">Welcome to my epic gamer text adventure project</p>
+                <p id="p2">It is 2020 and your are a McDonalds worker.</p>
+                <p id="p3">Are you ready to go to work? P.S. Rent is almost due.</p>
             </div>
             <div id="button_choices">
             
-                <a id="b1" class="buttons" href="#" onclick="bclick(1)">Yes</a>
-                <a id="b2" class="buttons" href="#"onclick="bclick(2)">no</a>
-                <a id="b3" class="buttons" href="#"onclick="bclick(3)">Yes</a>
-                <a id="b4" class="buttons" href="#"onclick="bclick(4)">no</a>
-
+                <a id="b1" class="buttons" href="#" onclick="bclick(1)">Go to your sad and depressing job at McDonalds</a>
+                <a id="b2" class="buttons" href="#"onclick="bclick(2)">Skip work and stay at home, you deserve the break</a>
+            
             </div>        
         </div>
     </div>      
 
-
-    <script>
+     <script>
         var b1 = document.getElementById("b1");
         var b2 = document.getElementById("b2");
-        var b3 = document.getElementById("b3");
-        var b4 = document.getElementById("b4");
         var img = document.getElementById("story_img");
         var p1 = document.getElementById("p1");
-        var p1 = document.getElementById("p2");
-        var p1 = document.getElementById("p3");
+        var p2 = document.getElementById("p2");
+        var p3 = document.getElementById("p3");
         var state = "intro";
         intro();
 
-        function intro(){
-            img.src = "images/babysloth.jpg";
-            b1.innerHTML = "yes";
-            b2.innerHTML = "No";
-            b3.style.display = "none";
-            b4.style.display = "none";
-            p1.innerHTML = "Welcome to my Adventure. The year is 1975. Your name is John.";
-            p2.innerHTML = "Would you like to schmum?"
-            p3.innerHTML = "";
+        function intro (){
+            
+            b1.innerHTML = "Go to your sad and depressing job at McDonalds";
+            b2.innerHTML = "Skip work and stay at home. You deserve the break.";
+            p1.innerHTML = "Welcome to my epic gamer text adventure project.";
+            p2.innerHTML = "The year is 2020 and you are a McDonald's Worker.";
+            p3.innerHTML = "Are you ready to go to work? P.S. Your rent is almost due"
+            b2.style.display = "block"
+        }
+        
+        function goToWork (){
+            img.src = "";
+            p1.innerHTML = "Your feeling like changing your route to work today."
+            p2.innerHTML = "You can either go onto your normal route or try another."
+            p3.innerHTML = "Are you built different? Where will you go?"
+            b1.innerHTML = "Normal route"
+            b2.innerHTML = "Different route"
+            b2.style.display = "block"
         }
 
-        function stayInSchoo(){
-            img.src="images/babysloth.jpg";
-            p1.innterHTML = "Being training for powers";
-            p2.innerHTML = "Meet other kids at the academy";
-            p3.innerHTML = "Would you like to try and escape";
-            b1.innerHTML = "Yes";
-            b2.innerHTML = "No";
-            b3.innerHTML = "Maybe";
-            b3.style.display = block
+        function normalRoute (){
+            img.src = "";
+            p1.innerHTML = "Not feeling built different today, you walk to your late night shift at McDonalds. You get there safely, put your work clothes on and start grinding for that bread"
+            p2.innerHTML = "You feel funny but dismiss it. You begin your job as chef. The new food item is the Travis Scott burger, popularly named Travvie Patty.You start cranking out thousands of travvy patties in minutes. Your co-workers look at you astonished."
+            p3.innerHTML = "Your manager wants to talk"
+            b1.innerHTML = "Talk to him. You are built different"
+            b2.innerHTML = "Pretend you didn't hear him, your crippling anxiety could never"
+            b2.style.display = "none"
         }
 
-         function escape(){
-            img.src="images/babysloth.jpg";
-            p1.innterHTML = "Being training for powers";
-            p2.innerHTML = "Meet other kids at the academy";
-            p3.innerHTML = "Would you like to try and escape";
-            b1.innerHTML = "Yes";
-            b2.innerHTML = "No";
-            b3.innerHTML = "Maybe";
-            b3.style.display = block
+        function differentRoute (){
+            img.src = "";
+            p1.innerHTML = "You go left instead of right. You walk in to a weird dark alley"
+            p2.innerHTML = "You decide to walk into the alley, you must get to work. You must obtain that bread."
+            p3.innerHTML = ""
+            b1.innerHTML = "You go into the alley"
+            b2.innerHTML = ""
+            b2.style.display = "none"
+        }
 
+        function goIntoAlley (){
+            img.src = "";
+            p1.innerHTML = "Your walking minding your business, trying not to attract attention."
+            p2.innerHTML = "All of a sudden a group of men approach you"
+            p3.innerHTML = "Their leader Manny Heffley tells them to jump you"
+            b1.innerHTML = "Run"
+        }
 
-        //////State Machine
-        function bclick(button){
+         function attemptToRun (){
+            img.src = "";
+            p1.innerHTML = "Your to late. Manny and his boys have you surrounded."
+            p2.innerHTML = "You know its futile but you try to break away from them"
+            p3.innerHTML = "Manny Pistol whips you. You fall to the ground.Manny comes close to your ear on the ground and tells you to listen."
+            b1.innerHTML = "You listen"
+        }
+
+         function listenToManny (){
+            img.src = "";
+            p1.innerHTML = "Manny conjours a black hole from no where and reaches into it. He pulls out a spray can."
+            p2.innerHTML = "He begins to tag the wall. While he is doing this he mumbles on about society, similar to the joker movie. You are confused. Manny sees this, he says you dont need to understand, just watch."
+            p3.innerHTML = "You see that he has drawn the symbol of the revolution, the manny. He leans in close to your ear and whispers, the manny will not be televised. The world fades to black. GGWP should've gone the normal route."
+            b1.innerHTML = "Restart"
+         } 
+
+         function goTalk (){
+            img.src = "";
+            p1.innerHTML = "Your manager is shook, he is quaking in his timbs. He has never seen someone crank that many travvie patties at once."
+            p2.innerHTML = "He immedietly drops his position as manager and gives it to you."
+            p3.innerHTML = "You can finally make decent money and afford that boost to challenger in league. GGWP gamer, now your a living the life."
+            b1.innerHTML = ""
+            b2.innerHTML = ""
+            b2.style.display = "block"
+        }
+
+        function stayAtHome (){
+            img.src = "";
+            p1.innerHTML = "You stay home and relax and think about what you want to do. You want to play league of legends. You have dreams of finally climbing out of bronze into diamond."
+            p2.innerHTML = "Your are worried about getting hooked again"
+            p3.innerHTML = "You tell yourself that it wont happen again"
+            b1.innerHTML = "Play League of legends"
+            b2.innerHTML = ""
+            b2.style.display = "none"
+        }
+
+         function goGame (){
+            img.src = "";
+            p1.innerHTML = "You begin to play League of Legends, prepared to have no fun because that game sucks."
+            p2.innerHTML = "You start to play, you have fun."
+            p3.innerHTML = "You start winning many games, you feel hooked."
+            b1.innerHTML = "Play More"
+            b2.innerHTML = 
+            b2.style.display = "none"
+        } 
+
+        function keepP (){
+            img.src = "";
+            p1.innerHTML = "Days become weeks, weeks become months."
+            p2.innerHTML = "You haven't showered for months, your room is a mess. You keyboard is covered in cheeto dust as well as you.You have become addicted."
+            p3.innerHTML = "Since playing for months on end you have been fired from your job. You realize rent has to be payed in a day. You have no money. You spent it all on riot points. Should have gone to work.?"
+            b1.innerHTML = "Restart"
+            b2.innerHTML =
+            b2.style.display = "none"
+        }
+        
+        
+        
+        ///State Machine
+        function bclick(button){  
             if (state == "intro"){
-                if(button == 1){
-                    alert("Test");
-                    stayInSchool();
-                    state="stayInSchool"
+                if (button == 1){
+                    goToWork();
+                    state="goToWork";
+                }
+                else if(button == 2){
+                    stayAtHome();
+                    state = "stayAtHome"
                 }
             }
-            else if(button == 2){
-                goToCamp();
-                state="goToCamp";
+             else if(state == "stayAtHome"){
+                if (button == 1){
+                    goGame ();
+                    state = "goGame";
+                }
+             }
+             else if(state == "goGame"){
+                if (button == 1){
+                    keepP ();
+                    state = " keepP";
+                }
+             }
+            else if(state == "goToWork"){
+                if (button == 1){
+                    normalRoute ();
+                    state = "normalRoute";
+                }
+                else if(button == 2){
+                    differentRoute();
+                    state = "differentRoute"
+                }
+            }
+            else if(state == "differentRoute"){
+                if (button == 1){
+                    goIntoAlley ();
+                    state = "goIntoAlley";
+                }
+            }
+            else if(state == "goIntoAlley"){
+                if (button == 1){
+                    attemptToRun  ();
+                    state = "attemptToRun";
+                }
+            }
+            else if(state == "attemptToRun"){
+                if (button == 1){
+                     listenToManny  ();
+                    state = "listenToManny"
+                }
+            }
+            
+            else if(state == "listenToManny"){
+                if (button == 1){
+                    intro ();
+                    state = "intro";
+                }
+            }
+            else if(state == "keepP"){
+                if (button == 1){
+                    intro ();
+                    state = "intro";
+                }
             }
         }
-        else if(state == "stayInSchool"){
-            if(button == 1){
-                escape();
-                state = "escape"
-            }
-            else if(button ==2){
-                intenseTraining();
-                state = "intenseTraining";
-            }
-
     </script>
     </body>
 </html>
